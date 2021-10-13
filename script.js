@@ -153,3 +153,57 @@ function submit_song(){
         document.getElementById("song").value="";
     }
 }
+//exercise 7B index7b.html
+function submit_song_2(){
+    selected_song=document.getElementById("song").value;
+    if(song_validator){
+        let parent=document.createElement("div");
+        parent.innerHTML=selected_song;
+
+        let parent2=document.createElement("div");
+        let anchor=document.createElement("a");
+        anchor.innerHTML="Delete";
+        anchor.href="javascript:delete_element()";
+        parent2.appendChild(anchor);
+
+        let my_ul=document.getElementById("list2");
+        let new_li=document.createElement("li");
+        new_li.appendChild(parent);
+        new_li.appendChild(parent2);
+        my_ul.appendChild(new_li);
+
+        selected_song=null;
+        document.getElementById("song").value="";
+        song_validator=false;
+    }
+}
+function delete_element(){
+    let names=document.querySelectorAll(".element");
+}
+//exercise 8 index8.html2
+const my_array=[];
+let r_range=0,g_rang=0,b_range;
+function create_colors(){
+    index=0;
+    // let x=document.querySelectorAll(".coloring");
+    let x=document.getElementById("my_colors")
+    for(let i=0;i<216;i++){
+        r_range=Math.floor(Math.random()*256);
+        g_range=Math.floor(Math.random()*256);
+        b_range=Math.floor(Math.random()*256);
+        the_color="rgb("+r_range+","+g_range+","+b_range+")";
+        // x[i].style.backgroundColor=the_color;
+        my_array.push(the_color);
+
+        let k=document.createElement("div");
+        k.className="coloring";
+        k.style.backgroundColor=the_color;
+        k.addEventListener("click",function(){
+            document.getElementById("picked").innerHTML=this.style.backgroundColor;
+            document.getElementById("picked").style.backgroundColor=this.style.backgroundColor;
+        })
+        x.appendChild(k);
+    }
+    document.getElementById("picked").innerHTML=my_array[0];
+    document.getElementById("picked").style.backgroundColor=my_array[0];
+}
