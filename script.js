@@ -154,24 +154,34 @@ function submit_song(){
     }
 }
 //exercise 7B index7b.html
+function create_element(message){
+    let p_element=document.getElementById("list2");
+    let f_element=document.createElement("li"); 
+    let text=document.createElement("div");
+    text.innerHTML=message;
+    let delete_element=document.createElement("div");
+    let anchor=document.createElement("a");
+    anchor.innerHTML="Delete";
+    anchor.href="javascript:delete_element()";
+    delete_element.appendChild(anchor);
+    f_element.appendChild(text);
+    f_element.appendChild(delete_element);
+    delete_element.addEventListener("click",function(){
+        this.parentElement.remove();
+    });
+    p_element.appendChild(f_element);
+
+}
+function load3(){
+    let arr=["My favorite song","My second favorite song","I like this one too"];
+    for(let i=0;i<3;i++){
+        create_element(arr[i]);
+    }
+}
 function submit_song_2(){
     selected_song=document.getElementById("song").value;
     if(song_validator){
-        let parent=document.createElement("div");
-        parent.innerHTML=selected_song;
-
-        let parent2=document.createElement("div");
-        let anchor=document.createElement("a");
-        anchor.innerHTML="Delete";
-        anchor.href="javascript:delete_element()";
-        parent2.appendChild(anchor);
-
-        let my_ul=document.getElementById("list2");
-        let new_li=document.createElement("li");
-        new_li.appendChild(parent);
-        new_li.appendChild(parent2);
-        my_ul.appendChild(new_li);
-
+        create_element(selected_song);
         selected_song=null;
         document.getElementById("song").value="";
         song_validator=false;
