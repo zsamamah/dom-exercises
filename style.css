@@ -39,3 +39,21 @@ img{
 #submit{
     display: none;
 }
+.text_container{
+    width: 70vw;
+    border: 1px solid black;
+    padding: 0;
+}
+.text_container h1, .text_container p{
+    margin: 0;
+}
+.text_container .heading{
+    padding: 20px;
+    background-color: rgb(201, 201, 201);
+    display: flex;
+    justify-content: space-between;
+}
+.text_container #msg1,.text_container #msg2,.text_container #msg3{
+    padding: 10px;
+    display:none;
+}

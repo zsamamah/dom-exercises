@@ -92,3 +92,43 @@ function view_submit(){
     else
     document.getElementById("submit").style.display="none";
 }
+//exercise 6 index6.html
+show1_clicked="none";
+show2_clicked="none";
+show3_clicked="none";
+function show1(){
+    if(show1_clicked=="none"){
+        document.getElementById("msg1").style.display="block";
+        show1_clicked="block";
+        document.getElementById("anchor1").style.display="none";
+    }
+    else{
+        document.getElementById("msg1").style.display="none";
+        show1_clicked="none";
+        document.getElementById("anchor1").style.display="inline";
+    }
+}
+function show2(){
+    if(show2_clicked=="none"){
+        document.getElementById("msg2").style.display="block";
+        show2_clicked="block";
+        document.getElementById("anchor2").style.display="none";
+    }
+    else{
+        document.getElementById("msg2").style.display="none";
+        show2_clicked="none";
+        document.getElementById("anchor2").style.display="inline";
+    }
+}
+function show3(){
+    if(show3_clicked=="none"){
+        document.getElementById("msg3").style.display="block";
+        show3_clicked="block";
+        document.getElementById("anchor3").style.display="none";
+    }
+    else{
+        document.getElementById("msg3").style.display="none";
+        show3_clicked="none";
+        document.getElementById("anchor3").style.display="inline";
+    }
+}
