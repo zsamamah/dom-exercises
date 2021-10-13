@@ -26,3 +26,16 @@ img{
     border: 1px solid black;
     text-overflow:ellipsis;
 }
+#pass_container{
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+#pass-msg , #repass-msg{
+    color: red;
+    font-weight: bold;
+}
+#submit{
+    display: none;
+}

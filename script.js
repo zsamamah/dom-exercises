@@ -71,3 +71,24 @@ function underline(){
         selected_decoration="none";
     document.getElementById("text").style.textDecoration=selected_decoration;
 }
+//exercise 5 (input check example) index5.html
+function change_pass(){
+    selected_password=document.forms["form"]["password"].value;
+    if(selected_password.length<6)
+        document.getElementById("pass-msg").innerHTML="Too Short!";
+    else
+        document.getElementById("pass-msg").innerHTML="";
+}
+function change_repass(){
+    selected_repassword=document.forms["form"]["repeat-password"].value;
+    if(selected_repassword!=selected_password)
+        document.getElementById("repass-msg").innerHTML="Password don`t match!";
+    else
+        document.getElementById("repass-msg").innerHTML="";
+}
+function view_submit(){
+    if(selected_password==selected_repassword && selected_password.length>5)
+        document.getElementById("submit").style.display="inline";
+    else
+    document.getElementById("submit").style.display="none";
+}
