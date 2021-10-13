@@ -132,3 +132,24 @@ function show3(){
         document.getElementById("anchor3").style.display="inline";
     }
 }
+//exercise 7 index7.html
+song_validator=false;
+function validate(){
+    if(document.getElementById("song").value!=null || " ")
+        song_validator=true;
+    else
+        song_validator=false;
+}
+function submit_song(){
+    selected_song=document.getElementById("song").value;
+    if(song_validator){
+        let my_ul=document.getElementById("list");
+        let new_li=document.createElement("li");
+        let new_text=document.createTextNode(selected_song);
+        new_li.appendChild(new_text);
+        my_ul.appendChild(new_li);
+        song_validator=false;
+        selected_song=null;
+        document.getElementById("song").value="";
+    }
+}
