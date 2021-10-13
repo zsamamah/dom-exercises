@@ -1,0 +1,28 @@
+#ex1{
+    width: 40vw;
+    background-color: yellow;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+#ex2,#ex2b{
+    width: 200px;
+    height: 200px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+#style_container > div{
+    display: inline;
+    width: 50vh;
+}
+#text{
+    width: 50vw;
+    padding: 10px;
+    padding-bottom:50px ;
+    border: 1px solid black;
+    text-overflow:ellipsis;
+}

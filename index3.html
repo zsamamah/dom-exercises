@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Exercise #3: Changing image</title>
+  </head>
+  <body>
+    <select name="select_flags" id="select_flag" onchange="change_value()" >
+        <option value="tmp">Select</option>
+      <option value="germany">Germany</option>
+      <option value="uk">UK</option>
+      <option value="italy">Italy</option>
+      <option value="spain">Spain</option>
+    </select>
+    <div style="width: 50vw;height: 25vh;">
+      <img src="./assets/tmp.png" alt="flag" id="flag_img"/>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

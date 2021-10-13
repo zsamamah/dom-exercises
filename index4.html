@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Exercise #4: Formatting text</title>
+</head>
+<body>
+    <div id="style_container">
+        <div id="f_family">
+            <select name="family" id="family" onchange="change_family()">
+                <option value="sans-serif">sans-serif</option>
+                <option value="cursive">cursive</option>
+                <option value="monospace">monospace</option>
+                <option value="fantasy">fantasy</option>
+            </select>
+        </div>
+        <div id="f_size">
+            <select name="size" id="size" onchange="change_size()">
+                <option value="10px">10px</option>
+                <option value="16px" selected>16px</option>
+                <option value="20px">20px</option>
+                <option value="25px">25px</option>
+                <option value="30px">30px</option>
+                <option value="50px">50px</option>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" name="italic" id="italic" onchange="italic()">
+            <label for="italic"><em>Italic</em></label>
+        </div>
+        <div>
+            <input type="checkbox" name="bold" id="bold" onchange="bold()">
+            <label for="bold"><b>Bold</b></label>
+        </div>
+        <div>
+            <input type="checkbox" name="underline" id="underline" onchange="underline()">
+            <label for="underline"><u>Underline</u></label>
+        </div>
+    </div>
+    
+    <div id="text">
+        The quick brown fox jumps over the lazy dog
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
