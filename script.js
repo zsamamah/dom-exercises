@@ -217,3 +217,7 @@ function create_colors(){
     document.getElementById("picked").innerHTML=my_array[0];
     document.getElementById("picked").style.backgroundColor=my_array[0];
 }
+//footer
+function nextPage(x){
+    window.location.href=x;
+}

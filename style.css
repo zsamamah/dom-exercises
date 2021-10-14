@@ -103,3 +103,8 @@ li > div:last-child{
     /* height: 50px; */
     width: max-content;
 }
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+}

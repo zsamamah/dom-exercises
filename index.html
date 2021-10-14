@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <title>Exercise #1: Changing text</title>
 </head>
 <body>
     <div id="ex1" onmouseover="ex1_mouseover()" onmouseleave="ex1_mouseleave()">
         Hello World!
     </div>
+    <footer class="footer">
+        <button disabled>
+            Back
+        </button>
+        <button onclick="nextPage('./index1.html')">
+            Next
+        </button>
+    </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
